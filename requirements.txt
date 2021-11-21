@@ -1,0 +1,2 @@
+grpcio-tools ~= 1.30
+pylsl ~= 1.10.4

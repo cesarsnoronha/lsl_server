@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+enum State {
+    START = 0;
+    SENTENCE_SHOW = 1;
+    QUESTION_SHOW = 2;
+    ANSWER = 3;
+}
+
+message LSLRequest {
+    State state = 1;
+}
+
+message LSLResponse {
+    int32 id = 1;
+    string description = 2;
+}
+
+service LSLMessage {
+    rpc SendMessage (LSLRequest) returns (LSLResponse);
+}
